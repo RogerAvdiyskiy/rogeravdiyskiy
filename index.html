@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#737373">
+<title>Roger Avdiyskiy</title>
+<meta name="description" content="Roger Avdiyskiy, HTL Spengergasse. Kontakt und Lebenslauf.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Nur Grau und Weiss, wie der Lebenslauf (Kopfbalken #737373, Poppins, Be Vietnam Pro) */
+:root{--band:#737373;--band-dark:#5e5e5e;--paper:#fdfdfd;--ink:#2b2b2b;--muted:#6b6b6b;--line:#d9d9d9}
+*{box-sizing:border-box;margin:0}
+/* oben grau, unten weiss: kein weisser Spalt beim Ueberscrollen */
+html{background:linear-gradient(var(--band) 50%,var(--paper) 50%)}
+body{background:var(--paper);color:var(--ink);font:400 1rem/1.55 Poppins,system-ui,sans-serif;min-height:100svh}
+.band{background:var(--band);color:#fff;padding:calc(32px + env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) 28px max(16px,env(safe-area-inset-left))}
+.wrap{max-width:32rem;margin:0 auto}
+.band .wrap{display:flex;align-items:center;gap:20px}
+.band img{width:96px;height:96px;border-radius:50%;border:3px solid #fff;object-fit:cover;flex:none}
+h1{font:800 clamp(1.6rem,7vw,2.1rem)/1.05 "Be Vietnam Pro",Poppins,sans-serif}
+.role{font-size:.875rem;margin-top:6px}
+main.wrap{padding:24px max(16px,env(safe-area-inset-right)) 40px max(16px,env(safe-area-inset-left))}
+.lead{max-width:36ch}
+.lead strong{font-weight:600}
+.nobr{white-space:nowrap}
+.actions{display:grid;gap:12px;margin:24px 0 32px}
+.btn{display:flex;align-items:center;justify-content:space-between;min-height:52px;padding:12px 18px;border-radius:6px;font-weight:600;text-decoration:none;border:2px solid var(--band);color:var(--ink);background:#fff;transition:background-color .2s,border-color .2s,color .2s}
+.btn.primary{background:var(--band);color:#fff}
+.btn span{font-weight:400;font-size:.8125rem}
+.btn:active,.btn.primary:active{background:var(--band-dark);border-color:var(--band-dark);color:#fff}
+h2{font-size:.95rem;font-weight:600;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.list{list-style:none;padding:0}
+.list li{display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--line)}
+.list a{flex:1;min-width:0;display:flex;flex-direction:column;justify-content:center;min-height:56px;padding:8px 0;color:var(--ink);text-decoration:none}
+.k{font-size:.8125rem;color:var(--muted)}
+.v{font-weight:500;overflow-wrap:anywhere;text-decoration:underline;text-decoration-color:transparent;text-underline-offset:3px;transition:text-decoration-color .15s}
+/* Unterstreichen nur beim Zeigen (Maus), Antippen (Handy) oder Tastatur-Fokus */
+.list a:active .v,.list a:focus-visible .v{text-decoration-color:currentColor}
+@media (hover:hover){.list a:hover .v{text-decoration-color:currentColor}.btn:hover{background:var(--band-dark);border-color:var(--band-dark);color:#fff}}
+.copy{flex:none;width:44px;height:44px;display:grid;place-items:center;padding:0;background:transparent;border:1.5px solid var(--line);border-radius:6px;color:var(--muted);cursor:pointer;transition:border-color .2s,color .2s}
+.copy svg{width:18px;height:18px}
+.copy .ok{display:none}
+.copy.done{border-color:var(--band);color:var(--band)}
+.copy.done .ok{display:block}.copy.done .ic{display:none}
+@media (hover:hover){.copy:hover{border-color:var(--band);color:var(--ink)}}
+a:focus-visible,.copy:focus-visible{outline:3px solid var(--band);outline-offset:3px;border-radius:6px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+@media (min-width:600px){.band img{width:120px;height:120px}.band{padding-top:calc(48px + env(safe-area-inset-top));padding-bottom:40px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header class="band">
+  <div class="wrap">
+    <img src="foto.jpg" alt="Porträt von Roger Avdiyskiy" width="480" height="480">
+    <div>
+      <h1>Roger Avdiyskiy</h1>
+      <p class="role">HTL Spengergasse, Betriebsinformatik</p>
+    </div>
+  </div>
+</header>
+<main class="wrap">
+  <p class="lead">Schüler im 3. Jahrgang. Ich suche ein <strong><span class="nobr">IT-Ferialpraktikum</span> von 5. bis 30. Juli 2027</strong>.</p>
+  <div class="actions">
+    <a class="btn primary" href="roger-avdiyskiy.vcf" download>Kontakt speichern <span>vCard</span></a>
+    <a class="btn" href="lebenslauf.html">Lebenslauf ansehen <span>1 Seite</span></a>
+  </div>
+  <h2>Kontakt</h2>
+  <ul class="list">
+    <li><a href="tel:+436765332686"><span class="k">Telefon</span><span class="v">+43 676 533 26 86</span></a><button type="button" class="copy" data-copy="+436765332686" aria-label="Telefonnummer kopieren"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></svg><svg class="ok" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></button></li>
+    <li><a href="mailto:roger.avdiyskiy@gmail.com"><span class="k">E-Mail</span><span class="v">roger.avdiyskiy@gmail.com</span></a><button type="button" class="copy" data-copy="roger.avdiyskiy@gmail.com" aria-label="E-Mail-Adresse kopieren"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></svg><svg class="ok" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></button></li>
+    <li><a href="https://www.linkedin.com/in/roger-avdiyskiy-bb3859436/" rel="noopener"><span class="k">LinkedIn</span><span class="v">roger-avdiyskiy</span></a></li>
+    <li><a href="https://github.com/RogerAvdiyskiy" rel="noopener"><span class="k">GitHub</span><span class="v">RogerAvdiyskiy</span></a></li>  </ul>
+</main>
+<p class="vh" aria-live="polite" id="status"></p>
+<script>
+document.querySelectorAll('.copy').forEach(btn => btn.addEventListener('click', async () => {
+  const text = btn.dataset.copy;
+  try { await navigator.clipboard.writeText(text); }
+  catch { const t = document.createElement('textarea'); t.value = text; document.body.append(t); t.select(); document.execCommand('copy'); t.remove(); }
+  btn.classList.add('done');
+  if (navigator.vibrate) navigator.vibrate(10);
+  document.getElementById('status').textContent = text + ' kopiert';
+  clearTimeout(btn._t);
+  btn._t = setTimeout(() => btn.classList.remove('done'), 2000);
+}));
+</script>
+</body>
+</html>
